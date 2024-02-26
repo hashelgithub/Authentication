@@ -17,6 +17,7 @@ const SingInScreen = () => {
   const [password, setPassword] = useState('');
 
   const {height} = useWindowDimensions();
+
   const navigation = useNavigation();
 
   const onSignInPressed = () => {
