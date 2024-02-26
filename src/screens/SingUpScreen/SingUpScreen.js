@@ -2,19 +2,21 @@ import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import React, {useState} from 'react';
 import Custominput from '../../components/Custominput';
 import CustomButton from '../../components/CustomButton';
+import {useNavigation} from '@react-navigation/native';
 
 const SingUpScreen = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [passwordRepeat, setPasswordRepeat] = useState('');
+  const navigation = useNavigation();
 
   const onRegisterPressed = () => {
-    console.warn('onRegisterPressed');
+    navigation.navigate('ConfirmEmail');
   };
 
   const onSignInPress = () => {
-    console.warn('onSignInPress');
+    navigation.navigate('SignIn');
   };
 
   const onTermsOfUsePressed = () => {

@@ -10,21 +10,23 @@ import React, {useState} from 'react';
 import Picture from '../../../assets/images/Picture.jpg';
 import Custominput from '../../components/Custominput';
 import CustomButton from '../../components/CustomButton';
+import {useNavigation} from '@react-navigation/native';
 
 const SingInScreen = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const {height} = useWindowDimensions();
+  const navigation = useNavigation();
 
   const onSignInPressed = () => {
-    console.warn('Sign in');
+    navigation.navigate('Home');
   };
   const onForgotPasswordPressed = () => {
-    console.warn('onForgotPasswordPressed');
+    navigation.navigate('ForgotPassword');
   };
   const onSignUpPress = () => {
-    console.warn('onSignUpPress');
+    navigation.navigate('SignUp');
   };
   return (
     <ScrollView showsVerticalScrollIndicator={false}>

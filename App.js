@@ -10,11 +10,12 @@ import React from 'react';
 import {SafeAreaView, StyleSheet, Text} from 'react-native';
 
 import Navigation from './src/navigation/index';
-
+import HomeScreen from './src/screens/HomeScreen';
 const App = () => {
   return (
     <SafeAreaView style={style.root}>
-      <Navigation />
+      {/* <Navigation /> */}
+      <HomeScreen />
     </SafeAreaView>
   );
 };
