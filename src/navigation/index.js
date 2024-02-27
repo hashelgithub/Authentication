@@ -3,6 +3,7 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+import WelcomeScreen from '../screens/WelcomeScreen';
 import SingInScreen from '../screens/SingInScreen/SingInScreen';
 import SingUpScreen from '../screens/SingUpScreen/SingUpScreen';
 import ConfirmEmailScreen from '../screens/ConfirmEmailScreen/ConfirmEmailScreen';
@@ -18,6 +19,7 @@ const Navigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="SignIn" component={SingInScreen} />
         <Stack.Screen name="SignUp" component={SingUpScreen} />
         <Stack.Screen name="ConfirmEmail" component={ConfirmEmailScreen} />
